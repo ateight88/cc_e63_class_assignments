@@ -4,7 +4,7 @@
 
 ### Module 1 - Python
 
-... Project - Flask & SLQite / Django & Postgres
+... Project - Flask & SQLite / Django & Postgres
 
 ### Module 2 - Javascript
 
