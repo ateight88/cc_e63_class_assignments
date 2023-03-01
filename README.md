@@ -1,6 +1,6 @@
 # E63 - Class Assignments
 
-## Coure work / projects etc...
+## Course work / projects etc...
 
 ### Module 1 - Python
 
