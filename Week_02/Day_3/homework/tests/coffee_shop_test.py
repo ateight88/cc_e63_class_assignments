@@ -63,7 +63,7 @@ class TestCoffeeShop(unittest.TestCase):
         self.assertEqual(customer.energy_level, 19)
     
     # @unittest.skip("Skip test")
-    def test_customer_energy_level_increase(self):
+    def test_customer_energy_level_decrease(self):
         food = Food("Sandwich", 4, 2)
         customer = Customer("John", 30, 20, 10)
         customer.buy_food(food)
