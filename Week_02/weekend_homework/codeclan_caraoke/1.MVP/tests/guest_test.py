@@ -5,6 +5,6 @@ class TestGuest(unittest.TestCase):
       def test_init(self):
         #   pass
           room = Room(101, "Ocean View")
-          self.assertEqual(room.name, "Ocean View")
-          self.assertEqual(room.room_number, 101)
+          self.assertEqual("Ocean View", room.name)
+          self.assertEqual(101, room.room_number)
           
