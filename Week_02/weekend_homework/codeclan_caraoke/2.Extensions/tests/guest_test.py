@@ -6,7 +6,7 @@ class TestGuest(unittest.TestCase):
       def test_init(self):
         #   pass
         guest = Guest("Alice", 50)
-        self.assertEqual(guest.name, "Alice")
-        self.assertEqual(guest.money, 50)
+        self.assertEqual("Alice", guest.name)
+        self.assertEqual(50, guest.money)
         self.assertIsNone(guest.room)
           

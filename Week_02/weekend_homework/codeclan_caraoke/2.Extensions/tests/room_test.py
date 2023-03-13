@@ -23,7 +23,7 @@ class TestRoom(unittest.TestCase):
         self.assertTrue(self.room.checkIn(self.guest2))
         self.assertTrue(self.room.checkIn(self.guest3))
         self.assertTrue(self.room.checkIn(self.guest4))
-        self.assertEqual(len(self.room.guests), 4)  
+        self.assertEqual(4, len(self.room.guests))  
 
     def test_checkOut(self):
         guest1 = Guest("John", 15)
@@ -35,13 +35,13 @@ class TestRoom(unittest.TestCase):
         self.room.checkIn(guest3)
         self.assertTrue(self.room.checkOut(guest1))
         self.assertFalse(self.room.checkOut(guest4))
-        self.assertEqual(len(self.room.guests), 2)
+        self.assertEqual(2, len(self.room.guests))
 
     def test_addSongs(self):
         self.room.addSongs(self.song1)
         self.room.addSongs(self.song2)
         self.room.addSongs(self.song3)
-        self.assertEqual(len(self.room.songs), 3)
+        self.assertEqual(3, len(self.room.songs))
         self.assertIn(self.song1, self.room.songs)
         self.assertIn(self.song2, self.room.songs)
         self.assertIn(self.song3, self.room.songs)
@@ -49,7 +49,7 @@ class TestRoom(unittest.TestCase):
     def test_chargeEntryFee(self):
         self.assertTrue(self.room.chargeEntryFee(self.guest1))
         self.assertTrue(self.room.chargeEntryFee(self.guest2))
-        self.assertEqual(self.guest1.money, 5)
-        self.assertEqual(self.guest2.money, 0)
-        self.assertEqual(self.room.total_earnings, 20)    
+        self.assertEqual(5, self.guest1.money)
+        self.assertEqual(0, self.guest2.money)
+        self.assertEqual(20, self.room.total_earnings)    
     
