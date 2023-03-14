@@ -1,0 +1,3 @@
+Made heavy use of tutorials from CSS courses and also directly from a tutorial on cloning the webpage itself.
+
+Way more CSS than I originally thought!... 
