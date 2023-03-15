@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <title>{{ order.customer_name }}'s - Orders</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li class="navLink"><a href="/orders">All Orders</a></li>
+      </ul>
+    </nav>
+    <hr />
+    <h1>Hey {{order.customer_name}}, here are your recent orders...</h1>
+
+    <div class="card">
+      <div class="order">
+        <p>Book Title: {{ order.book }}</p>
+        <p>Price: £{{ order.price }}</p>
+        <p>Qty: {{ order.qty }}</p>
+        {% if order.delivered == True %}
+        <p>Delivery Status: {{ order.delivered }} - Successfully Delivered</p>
+        {% endif %} {% if order.delivered == False %}
+        <p>Delivery Status: {{ order.delivered }} - On Its Way...</p>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Orders List</title>
+  </head>
+  <body>
+    <!-- jvar shortcut -->
+    <header>
+      <h1>{{ title }}</h1>
+      <h2>"Orders List"</h2>
+      <nav>
+        <ul>
+          <li class="navLink"><a href="/orders">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <p>{{ task_list }}</p> -->
+    <!-- jfor for a for loop -->
+    {% for order in orders_list %}
+    <div class="card">
+      <p>
+        Order No: 230{{ orders_list.index(order)+1 }} - Customer: {{
+        order.customer_name }}
+      </p>
+      <p>Order Date: {{ order.order_date }} - Qty: {{ order.qty }}</p>
+      <a href="/orders/{{orders_list.index(order)}}">Order Details</a>
+    </div>
+    {% endfor %}
+
+    <footer>2023 &copy; Our Book Store</footer>
+    <!-- type j to see list of options -->
+  </body>
+</html>
