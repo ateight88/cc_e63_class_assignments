@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <!-- jvar shortcut -->
+    <header>
+      <h1>All {{ title }}</h1>
+      <!-- <h2>"Books List"</h2> -->
+      <nav>
+        <ul>
+          <li class="navLink"><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <p>{{ task_list }}</p> -->
+    <!-- jfor for a for loop -->
+    {% for book in books_list %}
+    <div class="card">
+      <p>Book Details:</p>
+      <p>Title: {{ book.title }} - Author: {{ book.author }}</p>
+      <a href="/books/{{books_list.index(book)}}">Book Details</a>
+
+      <form action="book-remove" method="post">
+        <input type="hidden" name="title" value="{{ book.title }}" />
+        <input type="hidden" name="author" value="{{ book.author }}" />
+        <input type="hidden" name="genre" value="{{ book.genre }}" />
+        <input type="hidden" name="abstract" value="{{ book.abstract }}" />
+        <button class="remove" type="submit">Remove Book</button>
+      </form>
+    </div>
+
+    {% endfor %}
+
+    <footer>2023 &copy; Our Library</footer>
+    <!-- type j to see list of options -->
+  </body>
+</html>

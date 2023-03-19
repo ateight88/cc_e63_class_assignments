@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <title>Library Home</title>
+  </head>
+  <body>
+    <h1>Welcome To The Library</h1>
+    <nav>
+      <ul>
+        <li class="navLink"><a href="/books">All Books</a></li>
+      </ul>
+    </nav>
+
+    <h2>Add A Book To Our Library</h2>
+
+    <div class="card">
+      <div class="add_book">
+        <form action="/books" method="post">
+          <label class="add_book" for="title">Title</label>
+          <input
+            class="add_book"
+            type="text"
+            name="title"
+            id="title"
+            value=""
+            title
+          />
+          <label class="add_book" for="author">Author</label>
+          <input class="add_book" type="text" name="author" id="author" />
+          <label class="add_book" for="genre">Genre</label>
+          <input class="add_book" type="text" name="genre" id="genre" />
+          <label class="add_book" for="description">Abstract</label>
+          <textarea
+            class="add_book"
+            name="abstract"
+            id="abstract"
+            rows="2"
+            cols="30"
+          ></textarea>
+          <input class="add_book" type="submit" value="Add Book" />
+        </form>
+      </div>
+    </div>
+    <br />
+    <hr />
+  </body>
+</html>
