@@ -20,7 +20,7 @@ def select_all():
     return albums
 #delete_all
 def delete_all():
-        sql = "DELETE FROM TASKS"
+        sql = "DELETE FROM ALBUMS"
         run_sql(sql)
 #delete(id)
 def delete(id):
