@@ -20,11 +20,11 @@ def select_all():
     return albums
 #delete_all
 def delete_all():
-        sql = "DELETE FROM ALBUMS"
+        sql = "DELETE FROM albums"
         run_sql(sql)
 #delete(id)
 def delete(id):
-      sql = "DELETE FROM Albums WHERE id = %s"
+      sql = "DELETE FROM albums WHERE id = %s"
       values =[id]
       run_sql(sql, values)
 

@@ -8,7 +8,7 @@ def run_sql(sql, values=None):
     results = []
     # connect to the db
     try:
-        conn = psycopg2.connect("dbname='task_manager' ")
+        conn = psycopg2.connect("dbname='a_music_app' ")
         # get cursor
         cur = conn.cursor(cursor_factory=ext.DictCursor)
         # execute the sql
