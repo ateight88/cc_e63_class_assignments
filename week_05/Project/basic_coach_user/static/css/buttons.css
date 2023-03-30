@@ -1,0 +1,29 @@
+.btn {
+  border: 0px none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn--danger {
+  background-color: #c33c5591;
+}
+
+.btn--danger:hover {
+  background-color: #7300008d;
+  color: white;
+}
+
+.btn--action:hover {
+  background-color: #e1dabd;
+  color: white;
+}
+
+.btn--action {
+  background-color: #e1dabdd8;
+}
+
+.btn--wrapper {
+  margin: 0px 0px 30px 0px;
+}

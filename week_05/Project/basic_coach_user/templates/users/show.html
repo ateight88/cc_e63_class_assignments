@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{{user.name}}</h1>
+
+<h3>Current sessions with:</h3>
+
+{% if coaches %}
+<ul>
+  {% for coach in coaches %}
+  <li>{{ coach.name }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No coach yet...</p>
+<p>Maybe <a href="../sessions/new">create a session</a> with a coach?</p>
+{% endif %} &nbsp;
+<h3>Experience:</h3>
+<p>I have been training for {{user.experience}} years.</p>
+<p>My current fitness is at {{user.level}} level.</p>
+<h3>Bio:</h3>
+<p>{{user.bio}}</p>
+{% endblock %}

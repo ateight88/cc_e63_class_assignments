@@ -1,0 +1,2 @@
+Currently not able to add new session since making changes and adding new things.
+No visible error, but obviously missed something.
