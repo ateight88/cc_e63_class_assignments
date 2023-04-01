@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Update Athlete Information</h1>
+<div>
+  <form action="/athletes/{{ athlete.id }}" method="post">
+    <div>
+      <label for="name">Name:</label>
+      <br />
+      <input type="text" name="name" id="name" value="{{ athlete.name }}" />
+    </div>
+    <div>
+      <label for="experience">Experience:</label>
+      <br />
+      <input
+        type="text"
+        id="experience"
+        name="experience"
+        value="{{ athlete.experience }}"
+      />
+    </div>
+    <div>
+      <label for="level">Level:</label>
+      <select name="level" id="level">
+        <option value=" {{ athlete.level }} " selected="selected">
+          {{ athlete.level}}
+        </option>
+
+        {% if athlete.level == "Beginner" %}
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+        {% endif %} {% if athlete.level == "Intermediate" %}
+        <option value="Beginner">Beginner</option>
+        <option value="Advanced">Advanced</option>
+        {% endif %} {% if athlete.level == "Advanced" %}
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        {% endif %}
+      </select>
+    </div>
+
+    <label for="bio">Bio:</label>
+    <textarea name="bio" id="bio" cols="30" rows="10">
+{{ athlete.bio }}</textarea
+    >
+    <input type="hidden" id="img" name="img" value="{{ athlete.img }}" />
+
+    <input class="btn btn--block card__btn" type="submit" value="Save" />
+  </form>
+</div>
+{% endblock %}

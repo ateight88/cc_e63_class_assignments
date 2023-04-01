@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Edit Session Plan</h1>
+
+<form action="/sessions/{{ session_plan.id }}/update" method="post">
+  <label for="athlete">Athlete:</label>
+  <select name="athlete_id" id="athlete" disabled>
+    {% for athlete in athletes %} {% if athlete.id == session_plan.athlete.id %}
+    <option value="{{ athlete.id }}" selected="selected">
+      {{ athlete.name }}
+    </option>
+    {% else %}
+    <option value="{{ athlete.id }}">{{ athlete.name }}</option>
+    {% endif %} {% endfor %}
+  </select>
+  <br />
+
+  <label for="coach">Coach:</label>
+  <select name="coach_id" id="coach">
+    {% for coach in coaches %} {% if coach.id == session_plan.coach.id %}
+    <option value="{{ coach.id }}" selected="selected">{{ coach.name }}</option>
+    {% else %}
+    <option value="{{ coach.id }}">{{ coach.name }}</option>
+    {% endif %} {% endfor %}
+  </select>
+  <br />
+
+  <label for="session">Session Type:</label>
+  <br />
+  <br />
+  <input
+    type="text"
+    name="session_type"
+    id="session"
+    value="{{ session_plan.session_type }}"
+  />
+  <br /><br />
+
+  <label for="guidance">Guidance:</label>
+  <textarea name="guidance" id="guidance">{{ session_plan.guidance }}</textarea>
+  <br /><br />
+
+  <button class="btn btn--block card__btn" type="submit">Save Changes</button>
+</form>
+{% endblock %}

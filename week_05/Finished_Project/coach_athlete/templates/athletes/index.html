@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Athletes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  {% for athlete in athletes|sort(attribute='name') %}
+  <tr>
+    <td><a href="/athletes/{{ athlete.id }}"> {{athlete.name}} </a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

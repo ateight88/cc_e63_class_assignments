@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{{athlete.name}}</h1>
+
+<p><a href="/athletes/{{athlete.id}}/edit">Edit</a></p>
+
+<div class="card__athlete_img">
+  <img src="{{athlete.img }}" alt="No image available" />
+</div>
+<br />
+
+<div class="card__athlete_details">
+  <h3>Current sessions with:</h3>
+
+  {% if coaches %}
+  <ul>
+    {% for coach in coaches %}
+    <li>{{ coach.name }}</li>
+    {% endfor %}
+  </ul>
+
+  {% else %}
+  <p>No coach yet...</p>
+  <p>Maybe <a href="../sessions/new">create a session</a> with a coach?</p>
+  {% endif %} &nbsp;
+  <h3>Experience:</h3>
+  <p>
+    I have been training for {{athlete.experience}} {% if athlete.experience <=
+    1 %} year. {% endif %} {% if athlete.experience > 1 %} years. {% endif %}
+  </p>
+  <p>My current fitness is at {{athlete.level}} level.</p>
+  <h3>Bio:</h3>
+  <p>{{athlete.bio}}</p>
+</div>
+{% endblock %}

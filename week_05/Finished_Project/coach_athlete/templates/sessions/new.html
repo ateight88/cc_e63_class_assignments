@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Add A Session To An Athlete</h1>
+<div>
+  <form action="/sessions" method="post">
+    <label for="athlete">Select an athlete:</label>
+    <select name="athlete_id" id="athlete">
+      <option value="Select">Select...</option>
+      {% for athlete in athletes %} {% if athlete.name != 'Phoenix - (No Coach)'
+      %}
+      <option value="{{ athlete.id }}">{{ athlete.name }}</option>
+      {% endif %} {% endfor %}
+    </select>
+
+    <label for="coach">Select a coach:</label>
+    <select name="coach_id" id="coach">
+      <option value="Select">Select...</option>
+      {% for coach in coaches %}
+      <option value="{{ coach.id }}">{{ coach.name }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="session">Select a workout type:</label>
+    <select name="new_session" id="new_session">
+      <option value="" disabled selected>Select...</option>
+      {% for session in session_plans %}
+      <option value="{{ session.session_type }}">
+        {{ session.session_type }}
+      </option>
+      {% endfor %}
+    </select>
+    <label for="new_session"></label>
+    <label>Or:</label>
+    <textarea
+      placeholder="Create a new session type"
+      name="new_session"
+      id="new_session"
+      cols="30"
+      rows="1"
+    ></textarea>
+
+    <label for="guidance">Session Guidance</label>
+    <textarea name="guidance" id="guidance" cols="30" rows="10"></textarea>
+
+    <input class="btn btn--block card__btn" type="submit" value="Save" />
+  </form>
+
+  {% endblock %}
+</div>

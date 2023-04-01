@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<h1>All Sessions</h1>
+
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/sessions/new">New session_plan</a>
+</p>
+
+<ul>
+  {% for session_plan in session_plans|sort(attribute='athlete.name')%}
+  <div>
+    <p>
+      {{ session_plan.athlete.name }} - {{ session_plan.coach.name }}({{
+      session_plan.coach.sport }})
+    </p>
+    <p>{{ session_plan.coach.sport }} - "<i>{{session_plan.guidance}}</i>"</p>
+    <br />
+
+    <div class="session-plans-list">
+      <a class="btn btn--action" href="/sessions/{{ session_plan.id }}/edit"
+        >Edit</a
+      >
+
+      <form
+        class="form-btn"
+        action="/sessions/{{ session_plan.id }}/delete"
+        method="POST"
+      >
+        <input class="btn btn--action" type="submit" value="delete" />
+      </form>
+    </div>
+  </div>
+
+  {% endfor %}
+</ul>
+
+{% endblock %}

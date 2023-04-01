@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Coaches</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Sport</th>
+  </tr>
+  {% for coach in coaches %}
+  <tr>
+    <td><a href="/coaches/{{ coach.id }}"> {{coach.name}} </a></td>
+    <td>|</td>
+    <td>{{ coach.sport }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<ul class="cards">
+  {% for coach in coaches %}
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__coach">
+        <img
+          src="{{coach.img }}"
+          alt="No image available"
+          style="width: 200; height: 200; object-fit: contain"
+        />
+      </div>
+      <div class="card__content">
+        <div class="card__title">{{ coach.name }}</div>
+        <p class="card__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+          tenetur.
+        </p>
+        <button class="btn btn--block card__btn">
+          <a href="../sessions/new">Book A Session</a>
+        </button>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
