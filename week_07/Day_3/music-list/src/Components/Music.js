@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const FetchData = () => {
+const MusicData = () => {
   const [itunesData, setItunesdata] = useState([]);
   const [genre, setGenre] = useState('All');
   const [isLoading, setIsLoading] = useState(false);
@@ -102,4 +102,4 @@ const FetchData = () => {
   );
 };
 
-export default FetchData;
+export default MusicData;
