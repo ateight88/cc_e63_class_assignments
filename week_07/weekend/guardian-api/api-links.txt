@@ -1,0 +1,10 @@
+https://content.guardianapis.com/search?q={query}&page-size=20
+
+https://content.guardianapis.com/search?q=scotland&format=json&page-size=20&api-key=test
+
+https://content.guardianapis.com/search?q=news&section=news&format=json&page-size=2&show-fields=thumbnail&api-key=test
+
+
+https://content.guardianapis.com/search?q=all&section=news&format=json&page-size=2&show-fields=thumbnail&api-key=test
+
+http://content.guardianapis.com/tags?q=apple&section=technology&show-references=all&format=json&page-size=2&show-fields=thumbnail&api-key=test
