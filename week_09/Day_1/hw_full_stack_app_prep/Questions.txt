@@ -1,0 +1,25 @@
+### Questions
+
+1. What is responsible for defining the routes of the `games` resource?
+create_router.js
+
+2. What do you notice about the folder structure? client and server are separate apps 
+
+Whats the client responsible for? making requests to the server and rendering the returned data
+
+Whats the server responsible for? serving the incoming request from the client and connecting to database.
+
+3. What are the the responsibilities of server.js? setup server, connect to db and define routes
+
+4. What are the responsibilities of the `gamesRouter`? creates an express router with CRUD methods
+
+5. What process does the the client (front-end) use to communicate with the server? GamesService.js uses the fetch api to the defined baseURL
+
+6. What optional second argument does the `fetch` method take? init
+And what is it used for in this application? to set the method type, the request body, and the headers type, to JSON	
+
+7. Which of the games API routes does the front-end application consume (i.e. make requests to)? Get, Post, Delete
+
+8. What are we using the [MongoDB Driver](http://mongodb.github.io/node-mongodb-native/) for? To connect Node.js server to the MongoDB database 
+
+9. Why do we need to use [`ObjectId`](https://mongodb.github.io/node-mongodb-native/api-bson-generated/objectid.html) from the MongoDB driver? To assign a unique id to a document in a collection
