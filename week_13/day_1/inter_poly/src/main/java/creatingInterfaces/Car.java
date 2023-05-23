@@ -28,11 +28,11 @@ public class Car implements IMove, IStart, IStop {
         this.odomoterReading += distance;
     }
 
-    public String start(){ // ADDED
+    public String start(){
         return "Switch on the ignition";
     }
 
-    public String stop() { // ADDED
+    public String stop() {
         return "Ease off the accelerator, apply the brake";
     }
 }

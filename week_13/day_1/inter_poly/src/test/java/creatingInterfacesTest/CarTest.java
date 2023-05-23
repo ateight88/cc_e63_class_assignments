@@ -31,18 +31,18 @@ public class CarTest {
     }
 
     @Test
-    public void canMove() { // NEW TEST
+    public void canMove() {
         car.move(10);
         assertEquals(10, car.getOdometerReading());
     }
 
     @Test
-    public void canStart() { // NEW TEST
+    public void canStart() {
         assertEquals("Switch on the ignition", car.start());
     }
 
     @Test
-    public void canStop() { // NEW TEST
+    public void canStop() {
         assertEquals("Ease off the accelerator, apply the brake", car.stop());
     }
 }

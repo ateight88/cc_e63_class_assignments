@@ -15,7 +15,7 @@ public class Bicycle implements IMove, IStop {
         this.distanceTravelled +=  distance;
     }
 
-    public String stop() { // ADDED
+    public String stop() {
         return "Stop pedalling and apply the brakes";
     }
 }

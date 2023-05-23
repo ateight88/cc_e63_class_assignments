@@ -27,7 +27,7 @@ public class BicycleTest {
     }
 
     @Test
-    public void canStop() { // NEW TEST
+    public void canStop() {
         assertEquals("Stop pedalling and apply the brakes", bicycle.stop());
     }
 }
