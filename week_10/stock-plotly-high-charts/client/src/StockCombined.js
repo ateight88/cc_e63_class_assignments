@@ -43,7 +43,7 @@ const StockChartAll = () => {
   console.log('symbolName', symbolNames);
   const fetchData = async () => {
     // API Keys: 06A4BPWV76NUMZUB, SQFHJEETBG9RZHNR
-    const API_KEY = '06A4BPWV76NUMZUB';
+    const API_KEY = 'SQFHJEETBG9RZHNR';
     const baseUrl = 'https://www.alphavantage.co/query?function=';
 
     const fetchedData = await Promise.all(

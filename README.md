@@ -12,4 +12,4 @@
 
 ### Module 3 - Java
 
-... Project - Microservices & Micro Frontends
+... Project - Spring Boot MongoDB React 
